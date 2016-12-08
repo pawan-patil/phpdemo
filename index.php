@@ -14,7 +14,7 @@ if($get_action=='yahooWeatherForecast'){
 	
 	$speech = "Today in ".$waether_response['query']['results']['channel']['location']['city'].": ".$waether_response['query']['results']['channel']['item']['condition']['text'].", the temperature is ".$waether_response['query']['results']['channel']['item']['condition']['temp']." ".$waether_response['query']['results']['channel']['units']['temperature'];
 	$data['fulfillment']['speech'] = $speech;
-	$data['fulfillment']['source'] = 'apiai-weather-webhook-sample1';
+	$data['fulfillment']['source'] = 'phpdemo';
 	$data['fulfillment']['displayText'] = $speech;
 	
 	$data['status']['code'] = 200;
