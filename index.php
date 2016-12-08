@@ -6,6 +6,7 @@ $get_action = $json_decode['result']['action'];
 if($get_action=='yahooWeatherForecast'){
 	
 	$sessionid = $json_decode['sessionId'];
+	$id = $json_decode['id'];
 	$location = $json_decode['result']['parameters']['geo-city'];
 	$link = urlencode("select * from weather.forecast where woeid in (select woeid from geo.places(1) where text='$location')");
     $baseurl = "https://query.yahooapis.com/v1/public/yql?q=$link&format=json";
@@ -24,7 +25,7 @@ if($get_action=='yahooWeatherForecast'){
 	
 	//header('Content-Type: application/json');
 	$str = '{
-  "id": "c720e1a5-ea95-4995-a7dd-e7829b77271c",
+  "id": "'.$id.'",
   "timestamp": "2016-12-08T10:11:24.472Z",
   "result": {
     "source": "agent",
