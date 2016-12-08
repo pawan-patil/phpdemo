@@ -26,8 +26,8 @@ if($get_action=='yahooWeatherForecast'){
 	echo '{
         "speech": speech,
         "displayText": speech,
-        "source": "phpdemo"
-    }'
+        "source": "phpdemo
+    }';
 	//echo json_encode($data);
 	
 } else {
