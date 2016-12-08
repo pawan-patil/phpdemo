@@ -23,44 +23,8 @@ if($get_action=='yahooWeatherForecast'){
 	$data['sessionId'] = $sessionid;
 	
 	header('Content-Type: application/json');
-	$str ='{
-  "id": "140d135a-831f-4a1e-b51c-4db8d92bdaea",
-  "timestamp": "2016-12-08T09:19:19.727Z",
-  "result": {
-    "source": "agent",
-    "resolvedQuery": "weather in pune",
-    "action": "yahooWeatherForecast11",
-    "actionIncomplete": false,
-    "parameters": {
-      "date": "",
-      "geo-city": "Pune"
-    },
-    "contexts": [],
-    "metadata": {
-      "intentId": "eefbb38e-8a96-4c5b-8943-951bd4af3ac4",
-      "webhookUsed": "true",
-      "webhookForSlotFillingUsed": "false",
-      "intentName": "weather"
-    },
-    "fulfillment": {
-      "speech": "Today in Pune: Sunny, the temperature is 83 F",
-      "messages": [
-        {
-          "type": 0,
-          "speech": "Today in Pune: Sunny, the temperature is 83 F"
-        }
-      ]
-    },
-    "score": 1
-  },
-  "status": {
-    "code": 200,
-    "errorType": "success"
-  },
-  "sessionId": "3b11b03a-28b7-4709-833f-45f60f5ebffa"
-}';
-	//echo json_encode($data);
-	echo $str;
+	
+	echo json_encode($data);
 	
 } else {
 	
