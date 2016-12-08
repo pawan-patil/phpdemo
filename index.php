@@ -13,9 +13,9 @@ if($get_action=='yahooWeatherForecast'){
     $waether_response = json_decode(file_get_contents($baseurl),true);
 	
 	$speech = "Today in ".$waether_response['query']['results']['channel']['location']['city'].": ".$waether_response['query']['results']['channel']['item']['condition']['text'].", the temperature is ".$waether_response['query']['results']['channel']['item']['condition']['temp']." ".$waether_response['query']['results']['channel']['units']['temperature'];
-	$data['fulfillment']['speech'] = $speech;
-	$data['fulfillment']['source'] = 'phpdemo';
-	$data['fulfillment']['displayText'] = $speech;
+	$data['speech'] = $speech;
+	$data['source'] = 'phpdemo';
+	$data['displayText'] = $speech;
 	
 	//$data['status']['code'] = 200;
 	//$data['status']['errorType'] = 'success';
@@ -24,8 +24,8 @@ if($get_action=='yahooWeatherForecast'){
 	
 	header('Content-Type: application/json');
 	
-	$fdata = json_encode($data);
-	echo json_decode($fdata,true);
+	echo json_encode($data);
+	
 } else {
 	
 	echo '{}';
