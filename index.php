@@ -16,7 +16,8 @@ if($get_action=='yahooWeatherForecast'){
 	$data['speech'] = $speech;
 	$data['source'] = 'phpdemo';
 	$data['displayText'] = $speech;
-	$data['image'] = 'pp.png';
+	$data['data'][0] = 'pp.png';
+	$data['data'][1] = 'pp2.png';
 	
 	//$data['status']['code'] = 200;
 	//$data['status']['errorType'] = 'success';
