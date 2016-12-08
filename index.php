@@ -17,18 +17,14 @@ if($get_action=='yahooWeatherForecast'){
 	$data['fulfillment']['source'] = 'phpdemo';
 	$data['fulfillment']['displayText'] = $speech;
 	
-	$data['status']['code'] = 200;
-	$data['status']['errorType'] = 'success';
+	//$data['status']['code'] = 200;
+	//$data['status']['errorType'] = 'success';
 	
-	$data['sessionId'] = $sessionid;
+	//$data['sessionId'] = $sessionid;
 	
 	header('Content-Type: application/json');
-	echo '"fulfillment": {
-		  "speech": "Today in Boston: Fair, the temperature is 37 F",
-		  "source": "apiai-weather-webhook-sample",
-		  "displayText": "Today in Boston: Fair, the temperature is 37 F"
-		}';
-	//echo json_encode($data);
+	
+	echo json_encode($data);
 	
 } else {
 	
