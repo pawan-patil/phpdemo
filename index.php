@@ -17,7 +17,7 @@ if($get_action=='yahooWeatherForecast'){
 	$data['fulfillment']['source'] = 'apiai-weather-webhook-sample1';
 	$data['fulfillment']['displayText'] = $speech;
 	
-	$data['status']['code'] = 206;
+	$data['status']['code'] = 200;
 	$data['status']['errorType'] = 'fail';
 	
 	$data['sessionId'] = $sessionid;
