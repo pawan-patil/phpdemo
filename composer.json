@@ -1,27 +1,6 @@
 {
-  "name": "pawan-patil/phpdemo",
-  "description": "API.ai php sdk",
-  "minimum-stability": "stable",
-  "license": "MIT",
-  "authors": [
-    {
-      "name": "Pawan patil",
-      "email": "censoft.pune46@gmail.com",
-      "homepage": "https://github.com/pawan-patil/"
-    }
-  ],
-  "keywords": [
-    "api.ai",
-    "api.ai sdk",
-    "bot"
-  ],
-  "autoload": {
-    "psr-4": {
-      "ApiAi\\": "src/"
-    }
-  },
-  "require": {
-    "php": ">=5.5.0",
-    "guzzlehttp/guzzle": "^6.2"
-  }
+  "name": "API.AI webhook demonstration",
+  "description": "API.AI webhook demonstration",
+  "repository": "https://github.com/pawan-patil/",
+  "keywords": ["api.ai", "natural language", "api.ai sdk"]
 }
