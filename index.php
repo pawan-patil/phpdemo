@@ -6,7 +6,6 @@ $get_action = $json_decode['result']['action'];
 if($get_action=='yahooWeatherForecast'){
 	
 	$sessionid = $json_decode['sessionId'];
-	$id = $json_decode['id'];
 	$location = $json_decode['result']['parameters']['geo-city'];
 	$link = urlencode("select * from weather.forecast where woeid in (select woeid from geo.places(1) where text='$location')");
     $baseurl = "https://query.yahooapis.com/v1/public/yql?q=$link&format=json";
@@ -24,45 +23,11 @@ if($get_action=='yahooWeatherForecast'){
 	$data['sessionId'] = $sessionid;
 	
 	header('Content-Type: application/json');
-	$str = '{
-  "id": "'.$id.'",
-  "timestamp": "2016-12-08T10:11:24.472Z",
-  "result": {
-    "source": "agent",
-    "resolvedQuery": "weather in pune",
-    "action": "yahooWeatherForecast",
-    "actionIncomplete": false,
-    "parameters": {
-      "date": "",
-      "geo-city": "Pune"
-    },
-    "contexts": [],
-    "metadata": {
-      "intentId": "97517aad-49e2-46f1-8e4e-9e0136a535cc",
-      "webhookUsed": "true",
-      "webhookForSlotFillingUsed": "false",
-      "intentName": "weather"
-    },
-    "fulfillment": {
-      "speech": "Today in Pune: Sunny, the temperature is 83 F",
-      "source": "apiai-weather-webhook-sample",
-      "displayText": "Today in Pune: Sunny, the temperature is 83 F",
-      "messages": [
-        {
-          "type": 0,
-          "speech": "Today in Pune: Sunny, the temperature is 83 F"
-        }
-      ]
-    },
-    "score": 1
-  },
-  "status": {
-    "code": 200,
-    "errorType": "success"
-  },
-  "sessionId": "48b12c4a-2531-4183-b6df-178028078c68"
-}';
-	echo $str;
+	echo '{
+        "speech": speech,
+        "displayText": speech,
+        "source": "phpdemo"
+    }'
 	//echo json_encode($data);
 	
 } else {
