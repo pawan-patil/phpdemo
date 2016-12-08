@@ -23,7 +23,7 @@ if($get_action=='yahooWeatherForecast'){
 	
 	$data['sessionId'] = $sessionid;
 	
-	//header('Content-Type: application/json');
+	header('Content-Type: text/html;charset=UTF-8');
 	$str = '{
   "id": "'.$id.'",
   "timestamp": "2016-12-08T10:11:24.472Z",
