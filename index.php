@@ -24,8 +24,8 @@ if($get_action=='yahooWeatherForecast'){
 	
 	header('Content-Type: application/json');
 	
-	return json_encode($data);
-	
+	$fdata = json_encode($data);
+	echo json_decode($fdata,true);
 } else {
 	
 	echo '{}';
